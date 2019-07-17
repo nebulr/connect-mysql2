@@ -1,8 +1,8 @@
-# connect-mysql
+# connect-mysql2
 
 This is a simple MySQL backed session store for connect.
 
-It uses the [node-mysql](https://github.com/felixge/node-mysql) module already installed in your project to establish and pool connections.
+It uses the [node-mysql2](https://github.com/sidorares/node-mysql2) module already installed in your project to establish and pool connections.
 
 ## Upgrading
 
@@ -25,13 +25,13 @@ It it recommended that you clear the session table; alternately sessions will be
 Here are some example use cases to get your application up and running.
 
 ### Default use case
-Simple use case using the `express` framework & `connect-session` middleware with `connect-mysql` as the data store.
+Simple use case using the `express` framework & `connect-session` middleware with `connect-mysql2` as the data store.
 
 ```javascript
 var express = require('express'), // express framework
     session = require('express-session'), // session middleware
     cookieParser = require('cookie-parser'), // cookie middleware
-    MySQLStore = require('connect-mysql')(session), // mysql session store
+    MySQLStore = require('connect-mysql2')(session), // mysql session store
     options = {
       config: {
         user: 'username', 
@@ -73,7 +73,7 @@ app.listen(3000, 'localhost');
 For those MySQL installations that make use of pools the following examples are available.
 
 ```javascript
-  var mysql = require('mysql'),
+  var mysql = require('mysql2'),
       options = {
         pool: mysql.createPool({
           user: 'dbuser',
@@ -112,11 +112,9 @@ var options = {
 
 ## contributing ##
 
-Contributions are welcome & appreciated. Refer to the [contributing document](https://github.com/nlf/connect-mysql/blob/master/CONTRIBUTING.md)
+Contributions are welcome & appreciated. Refer to the [contributing document](https://github.com/nebulr/connect-mysql2/blob/master/CONTRIBUTING.md)
 to help facilitate pull requests.
 
 ## license ##
 
-This software is licensed under the [MIT License](https://github.com/nlf/connect-mysql/blob/master/LICENSE).
-
-Nathan LaFreniere, Copyright (c) 2012 &Yet
+This software is licensed under the [MIT License](https://github.com/nebulr/connect-mysql2/blob/master/LICENSE).
