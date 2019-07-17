@@ -7,7 +7,7 @@
   ],
   "name": "connect-mysql2",
   "description": "a MySQL session store for connect",
-  "version": "v2.2.5",
+  "version": "2.2.6",
   "homepage": "https://github.com/nebulr/connect-mysql2",
   "repository": {
     "type": "git",
